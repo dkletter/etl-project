@@ -1,0 +1,2 @@
+username = "postgres"
+passwd = "organum"
