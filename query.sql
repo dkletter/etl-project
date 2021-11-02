@@ -28,7 +28,6 @@ SELECT * FROM yelp_data;
 SELECT * FROM top250;
 
 -- Join tables on restaurant
-SELECT yelp.name, yelp.city, yelp.stars, top250.rank
-FROM yelp_data AS yelp
-INNER JOIN restaurant  ON top250.restaurant = yelp.name
-ORDER BY top250.rank ASC;
+SELECT * FROM top250
+INNER JOIN yelp_data ON top250.restaurant = yelp_data.name
+ORDER BY top250.rank;
