@@ -6,8 +6,8 @@
 - Graciela Zamudio
 
 ### Data Sources
-Top 250 Chains: https://www.kaggle.com/michau96/restaurant-business-rankings-2020
-Yelp Academic Dataset: https://www.yelp.com/dataset
+- Top 250 Chains: https://www.kaggle.com/michau96/restaurant-business-rankings-2020
+- Yelp Academic Dataset: https://www.yelp.com/dataset
 
 ### Proposal
 Join two datasets consisting of Yelp business listings the Top 250 Restaurant Chains of 2020. We see value in using both datasets for competitive insights, sentiment analysis, and business intelligence in the restaurant industry. Also, these datasets are a great choice because what better way to get to know your teammates over breaking bread at the... data table.
