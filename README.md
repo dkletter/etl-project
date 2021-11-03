@@ -1,9 +1,9 @@
 # etl-project
 
 ### Team
-Daniel Kletter
-Jess Ramirez
-Graciela Zamudio
+- Daniel Kletter
+- Jess Ramirez
+- Graciela Zamudio
 
 ### Data Sources
 Top 250 Chains: https://www.kaggle.com/michau96/restaurant-business-rankings-2020
