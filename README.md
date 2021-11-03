@@ -29,7 +29,8 @@ Because the business category is organized as an array in the yelp data, we need
 ### Load
 We created a PostgreSQL database called restaurant_db and created two tables called top250 and yelp_data with the following schema:
 
-`CREATE table yelp_data (
+```
+CREATE table yelp_data (
 	id SERIAL,
 	name TEXT,
 	address TEXT,
@@ -50,13 +51,16 @@ CREATE table top250 (
 	units INT,
 	category TEXT,
 	PRIMARY KEY(id)
-);`
+);
+```
 
 Back in our jupyter notebooks we made a connection to the database, inspected the table names, and appended the data into the appropriate tables. We used `pd.read_sql_query()` to confirm the data had been successfully loaded into each table.
 
 Finally, we joined the two tables on the business name as follows:
 
-`SELECT top250.rank, yelp_data.name, yelp_data.address, yelp_data.city, yelp_data.state, yelp_data.postal_code, yelp_data.stars, top250.category, top250.sales, top250.units
+```
+SELECT top250.rank, yelp_data.name, yelp_data.address, yelp_data.city, yelp_data.state, yelp_data.postal_code, yelp_data.stars, top250.category, top250.sales, top250.units
 FROM top250
 INNER JOIN yelp_data ON top250.restaurant = yelp_data.name
-ORDER BY top250.rank;`
+ORDER BY top250.rank;
+```
