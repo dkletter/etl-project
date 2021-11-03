@@ -20,7 +20,7 @@ Separate jupyter notebooks were created to read the top250 CSV and yelp JSON fil
 ### Transform
 Starting with the top250 dataset, we dropped the following columns which didn’t add any apparent value: `Content` and `Headquarters` were mostly null values. `YOY_Sales`, and `YOY_Units` were calculated deltas formatted as a percentage.
 
-Because there isn’t a true common ID field to join on, and this is a one-to-many situation, we needed to compare restaurant names in the two datasets for consistency before any joining and to make sure we had enough useful data. After searching for each name from the top250 data in the yelp data we found 37 names which wouldn’t match for varying reasons. Using a dictionary and `.replace()` we changed the affected restaurant names in the top250 data because it was easier to make one change than many changes in the yelp data.
+Upon review of the data, the common element in these two datasets is the business name. Because there isn’t a true common ID field to join on, and this is a one-to-many situation, we needed to compare restaurant names in the two datasets for consistency before any joining and to make sure we had enough useful data. After searching for each name from the top250 data in the yelp data we found 37 names which wouldn’t match for varying reasons. Using a dictionary and `.replace()` we changed the affected restaurant names in the top250 data because it was easier to make one change than many changes in the yelp data.
 
 We dropped the following columns from the yelp dataset to keep things simple: `business_id`, `latitude`, `longitude`, `is_open`, `attributes`, and `hours`. 
 
