@@ -24,7 +24,7 @@ Upon review of the data, the common element in these two datasets is the busines
 
 We dropped the following columns from the yelp dataset to keep things simple: `business_id`, `latitude`, `longitude`, `is_open`, `attributes`, and `hours`. 
 
-Because the business category is organized as an array in the yelp data, we needed to find anything with `restaurants` or `coffee & tea` to eliminate non-restaurant businesses from the dataset. This was done using an OR regular expression off a keyword dictionary. The original yelp dataset was about 120 MB large and our priority was to reduce that as much as possible before loading it into the database.
+Because the business category is organized as an array in the yelp data, we needed to find anything with `restaurants` or `coffee & tea` to eliminate non-restaurant businesses from the dataset. This was done using an OR regular expression off a keyword dictionary. The original yelp dataset was about 125 MB large with over 160,000 rows. Our priority was to reduce that as much as possible before loading it into the database. After transformation, there were about 55,000 rows of data.
 
 ### Load
 We created a PostgreSQL database called restaurant_db and created two tables called top250 and yelp_data with the following schema:
